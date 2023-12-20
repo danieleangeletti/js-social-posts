@@ -107,7 +107,8 @@ for (let i = 0; i < posts.length; i++) {
 
     my_button.addEventListener("click", function(){
 
-        my_like_counter.innerHTML = `${posts[i].likes + 1}`
-        
+        my_button.classList.add("like-button--liked");
+        my_like_counter.innerHTML = `${posts[i].likes + 1}`;
+
     })
 }
