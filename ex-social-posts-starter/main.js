@@ -60,6 +60,8 @@ const posts = [
     }
 ];
 
+const array_of_posts_id_with_like = [];
+
 const my_container = document.getElementById("container");
 
 for (let i = 0; i < posts.length; i++) {
@@ -109,6 +111,7 @@ for (let i = 0; i < posts.length; i++) {
 
         my_button.classList.add("like-button--liked");
         my_like_counter.innerHTML = `${posts[i].likes + 1}`;
+        array_of_posts_id_with_like.push(posts[i].id);
 
     })
 }
