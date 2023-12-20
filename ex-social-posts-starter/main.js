@@ -63,7 +63,7 @@ const posts = [
 const my_container = document.getElementById("container");
 
 for (let i = 0; i < posts.length; i++) {
-    
+
     let my_div = document.createElement("div");
 
     my_div.innerHTML =
@@ -103,7 +103,11 @@ for (let i = 0; i < posts.length; i++) {
     my_container.append(my_div);
 
     let my_button = document.querySelector(`[data-postid="${posts[i].id}"]`);
-    my_button.addEventListener("click", function() {
-        console.log("CIAO")
-    });
+    let my_like_counter = document.getElementById(`like-counter-${posts[i].id}`);
+
+    my_button.addEventListener("click", function(){
+
+        my_like_counter.innerHTML = `${posts[i].likes + 1}`
+        
+    })
 }
