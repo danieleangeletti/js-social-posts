@@ -107,7 +107,9 @@ for (let i = 0; i < posts.length; i++) {
     let my_button = document.querySelector(`[data-postid="${posts[i].id}"]`);
     let my_like_counter = document.getElementById(`like-counter-${posts[i].id}`);
 
-    my_button.addEventListener("click", function() {
+    my_button.addEventListener("click", function(event) {
+
+        event.preventDefault();
 
         if (array_of_posts_id_with_like.includes(posts[i].id)) {
             
